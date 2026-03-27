@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Small Skies Bed and Breakfast Contact Form</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="styles/styles.css" rel="stylesheet">
+
+</head>
+<body>
+<div id="wrapper">
+  <header>
+      <h1>Small Skies B&amp;B</h1>
+  </header>
+  <nav>
+  <ul> 
+    <li><a href="index.html">Home</a></li>
+	<li><a href="contact.html">Contact</a></li>
+	<li><a href="rooms/open.html">Yard Room</a></li>
+	<li><a href="rooms/woods.html">Woods Room</a></li>
+	<li><a href="events/weekend.html">Weekend Events</a></li>
+  </ul>
+  </nav>
+  <main>
+  <h2>Ready to make a reservation?</h2>
+  <p>All fields must be filled out to start the reservation process, if you need help, contact us through our email.</p>
+  <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+  Full Name: <input type="text" name="fullName" id="name" required>
+  Email: <input type="text" name="email" id="mail" required>
+  Phone Number: <input type="text" name="phone" id="phone" required>
+  Which of the above would you rather be contacted through? <select size="1" name="contact" id="contact" required>
+                                                             <option value="">--select an option--</option>
+                                                             <option value="e">E-mail</option>
+															 <option value="p">Phone</option>
+															 </select>
+  Date of Arrival: <input type="date" name="aDate" id="adate" required>
+  Date of Departure: <input type="date" name="dDate" id="ddate" required>
+  Dietary Restrictions and other accomodations: <textarea name="accomodations" id="accomodations" cols="20" rows="2"></textarea>
+  <input type="submit">
+  </form>
+  </main>
+  <footer>
+  Copyright &copy; 2025<br>
+  <a href="mailto:p0597775@amarillocollege.com">Ly Prescott</a> <!-- emails me -->
+
+    This page was last updated on:
+	<script>
+	document.write(document.lastModified);
+	</script>
+  </footer>
+</div>
+</body>
+</html>

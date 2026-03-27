@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Small Skies B&amp;B Woods Room</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../styles/styles.css" rel="stylesheet">
+<script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+  <header>
+      <h1>Small Skies B&amp;B</h1>
+  </header>
+  <nav>
+  <ul> 
+    <li><a href="../index.html">Home</a></li>
+	<li><a href="../contact.html">Contact</a></li>
+	<li><a href="open.html">Yard Room</a></li>
+	<li><a href="woods.html">Woods Room</a></li>
+	<li><a href="../events/weekend.html">Weekend Events</a></li>
+  </ul>
+  </nav>
+  <main>
+  <h2>Room Info</h2>
+    <p>This room is only a couple hundred feet away from Freedom Nature Trails, and in collaboration with them, comes with a pass for full access to their properties for the entirety of your stay! The trails can be accessed through an exclusive entry point in the yard.</p>
+    <p>The room is 1bed/1bath, with an entertainment console including a 45 inch TV, a kitchen area with a mini-fridge and microwave, walk-in closet, and amenities such as clean towels, shampoo, soap, toothpaste, and an in room coffee maker. </p>
+<div id="galleryW">
+	<div class="galleft">
+	<ul>
+	<li><a href="../images/woods_out.png"><img src="../images/woods_out.png" width="80" height="80" alt="A picture of the exterior of the trails access room"></a></li>
+	<li><a href="../images/woods_room.webp"><img src="../images/woods_room.webp" width="80" height="80" alt="A picture of the interior of the trails access room"></a></li>
+	</ul>
+	</div>
+	<figure>
+	<img class="big" src="../images/woods_room.webp" alt="A picture of the interior of the trails access room">
+	<figcaption>Image of the trails access room option</figcaption>
+	</figure>
+	<script>
+	$(document).ready(function(){
+		$('#galleryW a').click(function(){
+		var galleryWHref = $(this).attr('href');
+		var galleryWAlt = $(this).attr('title');
+		$('figure img').attr({src: galleryWHref, alt: galleryWAlt });
+		$('figcaption').html(galleryWAlt);
+		return false;
+		});
+	});
+	</script>
+ </div>
+	  <h2>Price options</h2>
+    <ul>
+	<li>Standard Rate: $199 per night</li>
+	<li>Hot Breakfast Plan: $250 per night</li>
+	</ul>
+  <h2>Weekly Discounts Available!</h2>
+    <ul>
+	<li>Standard Rate: $1,200 per week (SAVE $193 compared to nightly rate!)</li>
+	<li>Hot Breakfast Plan: $1,500 per week (SAVE $250 compared to nightly rate!)</li>
+	</ul>
+  </main>
+  <footer>
+  Copyright &copy; 2025<br>
+  <a href="mailto:p0597775@amarillocollege.com">Ly Prescott</a> <!-- emails me -->
+
+    This page was last updated on:
+	<script>
+	document.write(document.lastModified);
+	</script>
+  </footer>
+</div>
+</body>
+</html>
