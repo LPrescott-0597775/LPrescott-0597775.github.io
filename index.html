@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Small Skies Bed and Breakfast </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="styles/styles.css" rel="stylesheet"> <!-- links to external stylesheet -->
+<script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+  <header>
+      <h1>Small Skies B&amp;B</h1> <!-- Top of displayed page-->
+  </header>
+  <nav>
+  <ul> 
+  <!-- list of links to the other parts of the website -->
+    <li><a href="index.html">Home</a></li>
+	<li><a href="contact.html">Contact</a></li>
+	<li><a href="rooms/open.html">Yard Room</a></li>
+	<li><a href="rooms/woods.html">Woods Room</a></li>
+	<li><a href="events/weekend.html">Weekend Events</a></li>
+  </ul>
+  </nav>
+ <main>
+ <h2>Bed, Breakfast, and Beautiful Scenery!</h2> <!-- section header -->
+ <p>Small Skies B&amp;B is a cozy two room Bed and Breakfast, on a property with both the benefits of city life and country nights. Spend your days enjoying tourist attractions in town, and come back after the sun sets to enjoy the stars in a clean and quiet environment, or take a retreat from everything from a few days to enjoy the fresh air and sunshine!</p>
+ <p>Whatever brings you to Small Skies B&amp;B, we are here to accomodate, with fresh rooms and hot food for the duration of your stay.</p>
+ <h2>Rated 4.6 Stars on Google Maps&trade;</h2> <!-- section header -->
+ <p>Despite having only been open for a few months, us here at Small Skies have charmed customers enough to earn a solid 4.6 rating on the popular navigation app Google Maps&trade;. So don't just take our word for how good our B&B is! Continue reading below to see what customers enjoyed most about their stays:</p>
+ <div class="quote"><p>&quot;Perfect place to stay while I was on vacation! I was hesitant to stay at a location so far from all of the things I wanted to do, but the kind staff, clean rooms, and good food made it more than worth the drive!&quot;</p></div>
+ <p>- Janessa Q, 5 Stars</p>
+ <div class="quote"><p>&quot;Nice small lodging outside of the city, great for when you just need a break from things. I like it a lot.&quot;</p></div>
+ <p>- Samuel M, 4 Stars</p>
+
+ <p>customers have also inculded some lovely photos from their stays at Small Skies B&amp;B:</p>
+ <div id="gallery">
+ <div class="galleft">
+ <ul>
+	<li><a href="images/review1.png"><img src="images/review1.png" width="80" height="80" alt="A selfie of a man who has been painting"></a></li>
+	<li><a href="images/review2.webp"><img src="images/review2.webp" width="80" height="80" alt="A picture of a child (rather irresponsibly) making smores"></a></li>
+	<li><a href="images/review3.png"><img src="images/review3.png" width="80" height="80" alt="A picture of the nature trails"></a></li>
+	<li><a href="images/review4.png"><img src="images/review4.png" width="80" height="80" alt="A picture of a pair of guests during yoga class"></a></li>
+	<li><a href="images/review5.webp"><img src="images/review5.webp" width="80" height="80" alt="A group selfie of a family walking tha nature trails"></a></li>
+ </ul>
+ </div>	
+	<figure>
+	<img class="big" src="images/review1.png" alt="A selfie of a man who has been painting">
+	<figcaption>Image from customer review</figcaption>
+	</figure>
+	<script>
+	$(document).ready(function(){
+		$('#gallery a').click(function(){
+		var galleryHref = $(this).attr('href');
+		var galleryAlt = $(this).attr('title');
+		$('figure img').attr({src: galleryHref, alt: galleryAlt });
+		$('figcaption').html(galleryAlt);
+		return false;
+		});
+	});
+	</script>
+ </div>
+  <h2>Be sure to book your stay today, rooms are limited!</h2>
+  <div id="homeimage"></div>
+  
+  </main>
+<footer>
+  Copyright &copy; 2025<br>
+  <a href="mailto:p0597775@amarillocollege.com">Ly Prescott</a> <!-- emails me -->
+
+    This page was last updated on:
+	<script>
+	document.write(document.lastModified);
+	</script>
+</footer>
+</div>
+</body>
+</html>
