@@ -104,8 +104,8 @@ border-bottom-color: #000000}
 
 form{display: grid;
 flex-direction: column;
-grid-template-columns: 55% 40%;
-grid-template-rows: 2em 2em 3em 6.5em 3em 3em 5.5em;
+grid-template-columns: auto auto;
+grid-template-rows: auto auto auto auto auto auto auto;
 width: 100%;
 text-align: left;
 column-gap: 1em;
@@ -199,7 +199,8 @@ h1{}
 form{width: 60%;
 display: grid;
 grid-gap: 1em;
-grid-template-columns: 10em 1fr;}
+grid-template-columns: 1fr auto;
+align-items: center;}
 submit{}
 
 #room1{margin-left: 13em;
