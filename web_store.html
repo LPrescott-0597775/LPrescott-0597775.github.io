@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Small Skies Bed and Breakfast Contact Form</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="styles/styles.css" rel="stylesheet">
+<script src = "scripts/web_store_main.js"></script>
+</head>
+<body>
+<div id="wrapper">
+  <header>
+      <h1>Small Skies B&amp;B</h1>
+  </header>
+  <nav>
+  <ul> 
+    <li><a href="index.html">Home</a></li>
+	<li><a href="contact.html">Contact</a></li>
+	<li><a href="rooms/open.html">Yard Room</a></li>
+	<li><a href="rooms/woods.html">Woods Room</a></li>
+	<li><a href="events/weekend.html">Weekend Events</a></li>
+	<li><a href="cost_estimator.html">Quote Me!</a></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li><a href="web_store.html">Visit the Web Store</a></li>
+  </ul>
+  </nav>
+  <main>
+  <h2>Small Skies Web Store</h2>
+  <p>Proceeds from the Small Skies Web Store help support our small buisness, and more!</p>
+  <p><i><strong>NOTE:</strong> Rooms can not be booked through the web store, please <a href="contact.html">contact us</a> to start the reservation process.</i></p>
+  
+  <form>
+        
+		<label for="shirts">Small Skies T-Shirt - $25.90 each</label><select name="shirts" id="shirts" required>
+                                                             <option value="none"></option>
+                                                             <option value="sm">Small</option>
+															 <option value="md">Medium</option>
+															 <option value="lg">Large</option>
+															 <option value="xl">X-Large</option>
+															 </select>
+		<label for="shirtsQty"></label><input type="number" min="0" id="shirtsQty" required>
+		<label for="painting">Small Skies Landscape Painting - $79.90 each</label><select name="painting" id="painting" required>
+                                                             <option value="none"></option>
+                                                             <option value="field">Fields</option>
+															 <option value="forest">Forest</option>
+															 </select>
+		<label for="paintingQty"></label><input type="number" min="0" id="paintingQty" required>
+		<label for="yarn">Local Sheep Yarn - $19.90 each</label><select name="yarn" id="yarn" required>
+                                                             <option value="none"></option>
+                                                             <option value="un">Undyed</option>
+															 <option value="rd">Red</option>
+															 <option value="or">Orange</option>
+															 <option value="ye">Yellow</option>
+															 <option value="gr">Green</option>
+															 <option value="bl">Blue</option>
+															 <option value="pu">Purple</option>
+															 <option value="bl">Black</option>
+															 <option value="br">Brown</option>
+															 <option value="sp">Surpise Me!</option>
+															 </select>
+		<label for="yarnQty"></label><input type="number" min="0" id="yarnQty" required>
+        <label for="donation">Round up your purchase to protect local wildlife?</label><input type="checkbox" id="donation">
+
+		<input type="submit" id="buttonAdd" value="add to cart" />
+    </form>
+	<p id = "shirtError"></p>
+	<p id = "paintingError"></p>
+	<p id = "yarnError"></p>
+  </main>
+  <footer>
+  Copyright &copy; 2025<br>
+  <a href="mailto:p0597775@amarillocollege.com">Ly Prescott</a> <!-- emails me -->
+
+    This page was last updated on:
+	<script>
+	document.write(document.lastModified);
+	</script>
+  </footer>
+</div>
+</body>
+</html>
