@@ -1,3 +1,42 @@
+      window.addEventListener("load", function(){   
+         const params = new URLSearchParams(window.location.search);
+
+  let shirts = params.get("shirts");
+  let shirtsQty = Number(params.get("shirtsQty"));
+  let painting = params.get("painting");
+  let paintingQty = Number(params.get("paintingQty"));
+  let yarn = params.get("yarn");
+  let yarnQty = Number(params.get("yarnQty"));
+  
+const SHIRT_PRICE = 25.90;
+const PAINTING_PRICE = 79.90;
+const YARN_PRICE = 19.90;
+
+let shirtTotal = shirtsQty * SHIRT_PRICE;
+let paintingTotal = paintingQty * PAINTING_PRICE;
+let yarnTotal = yarnQty * YARN_PRICE;
+
+let grandTotal = shirtTotal + paintingTotal + yarnTotal;
+
+let donation = params.has("donation");
+if (donation) {
+  grandTotal = Math.ceil(grandTotal);
+}
+
+document.getElementById("shirtsOut").textContent = shirts;
+   document.getElementById("shirtQtyOut").textContent = shirtsQty;
+   document.getElementById("shirtTotal").textContent = "$" + shirtTotal.toFixed(2);
+
+   document.getElementById("paintingOut").textContent = painting;
+   document.getElementById("paintingQtyOut").textContent = paintingQty;
+   document.getElementById("paintingTotal").textContent = "$" + paintingTotal.toFixed(2);
+
+   document.getElementById("yarnOut").textContent = yarn;
+   document.getElementById("yarnQtyOut").textContent = yarnQty;
+   document.getElementById("yarnTotal").textContent = "$" + yarnTotal.toFixed(2);
+
+   document.getElementById("Total").textContent = "$" + grandTotal.toFixed(2);
+
 let useShip = document.getElementById("useShip");
 window.addEventListener("click", copyShippingToBilling);
 
@@ -10,7 +49,7 @@ function copyShippingToBilling(){
 		document.getElementById("cityBill").value = document.getElementById("cityShip").value;
 		document.getElementById("countryBill").value = document.getElementById("countryShip").value;
 		document.getElementById("codeBill").value = document.getElementById("codeShip").value;
-		document.getElementById("stateBill").selectedIndex = document.getElementById("stateShip").selectedIndex;
+		document.getElementById("stateBill").value = document.getElementById("stateShip").value;
 	}
 }
 
@@ -25,4 +64,5 @@ for( let i = 0; i < fieldCount; i ++){
 function showValidationError(evt){
 	evt.preventDefault();
 	errorBox.textContent = "Complete all highlighted fields";
-}
+}		 
+      } );   
