@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Small Skies Bed and Breakfast </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../styles/styles.css" rel="stylesheet"> <!-- links to external stylesheet -->
+<link href="../styles/web_store_styles.css" rel="stylesheet">
+<script src="../scripts/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+  <header>
+      <h1>Small Skies B&amp;B</h1> <!-- Top of displayed page-->
+  </header>
+  <nav>
+  <ul> 
+  <!-- list of links to the other parts of the website -->
+    <li><a href="../index.html">Home</a></li>
+	<li><a href="../contact.html">Contact</a></li>
+	<li><a href="../rooms/open.html">Yard Room</a></li>
+	<li><a href="../rooms/woods.html">Woods Room</a></li>
+	<li><a href="../events/weekend.html">Weekend Events</a></li>
+	<li><a href="../cost_estimator.html">Quote Me!</a></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li><a href="web_store.html">Visit the Web Store</a></li>
+  </ul>
+  </nav>
+ <main>
+ <h2>Cart Summary</h2>
+
+<table id="cartSummary">
+   <tr>
+      <td>Item</td>
+	  <td>Details</td>
+      <td>Quantity</td>
+      <td>Price</td>
+      <td>Total</td>
+   </tr>
+
+   <tr>
+      <td>T-Shirt</td>
+	  <td><span id="shirtsOut"></span></td>
+      <td><span id="shirtQtyOut"></span></td>
+      <td>$25.90</td>
+      <td><span id="shirtTotal"></span></td>
+   </tr>
+
+   <tr>
+      <td>Painting</td>
+	  <td><span id="paintingOut"></span></td>
+      <td><span id="paintingQtyOut"></span></td>
+      <td>$79.90</td>
+      <td><span id="paintingTotal"></span></td>
+   </tr>
+
+   <tr>
+      <td>Yarn</td>
+	  <td><span id="yarnOut"></span></td>
+      <td><span id="yarnQtyOut"></span></td>
+      <td>$19.90</td>
+      <td><span id="yarnTotal"></span></td>
+   </tr>
+   <tr>
+      <td colspan="4"><strong>Total</strong></td>
+      <td><span id="Total"></span></td>
+   </tr>
+</table>
+	<h2>Shipping and Billing</h2>
+	
+	<form action = "submit.html" method = "GET">
+	<table id="shipping">
+         <caption>Shipping</caption>
+         <tr>
+            <td>First Name</td>
+            <td><input type="text" id="firstnameShip" required></td>
+         </tr>
+         <tr>
+            <td>Last Name</td>
+            <td><input type="text" id="lastnameShip" required></td>
+         </tr> 
+         <tr>
+            <td>Address 1</td>
+            <td><input type="text" id="address1Ship" required></td>
+         </tr>
+         <tr>
+            <td>Address 2</td>
+            <td><input type="text" id="address2Ship" required></td>
+         </tr> 
+         <tr>
+            <td>City</td>
+            <td><input type="text" id="cityShip" required></td>
+         </tr> 
+         <tr>
+            <td>State</td>
+            <td><input type="text" id="stateShip" required></td>
+         </tr>  
+         <tr>
+            <td>Country</td>
+            <td><input type="text" id="countryShip" required></td>
+         </tr>   
+         <tr>
+            <td>Postal Code</td>
+            <td><input type="text" id="codeShip" required></td>
+         </tr>          
+		        
+            <td>Phone Number</td>
+            <td><input type="text" id="phone" required></td>
+         </tr>   
+         <tr>
+            <td>Email</td>
+            <td><input type="text" id="email" required></td>
+         </tr>  
+      </table>
+	  
+      <label>Billing same as shipping<input type="checkbox" id="useShip"></label>
+	  
+      <table id="billing">
+         <caption>Billing</caption>
+         <tr>
+            <td>First Name</td>
+            <td><input type="text" id="firstnameBill" required></td>
+         </tr>
+         <tr>
+            <td>Last Name</td>
+            <td><input type="text" id="lastnameBill" required></td>
+         </tr> 
+         <tr>
+            <td>Address 1</td>
+            <td><input type="text" id="address1Bill" required></td>
+         </tr>
+         <tr>
+            <td>Address 2</td>
+            <td><input type="text" id="address2Bill" required></td>
+         </tr> 
+         <tr>
+            <td>City</td>
+            <td><input type="text" id="cityBill" required></td>
+         </tr> 
+         <tr>
+            <td>State</td>
+            <td><input type="text" id="stateBill" required></td>
+         </tr>  
+         <tr>
+            <td>Country</td>
+            <td><input type="text" id="countryBill" required></td>
+         </tr>   
+         <tr>
+            <td>Postal Code</td>
+            <td><input type="text" id="codeBill" required></td>
+         </tr>    
+	  </table>
+	  <input type="submit" value="Submit Order">
+	  </form>
+</main>
+<script src="../scripts/web_store_shipping.js"></script>
+
+<footer>
+  Copyright &copy; 2025<br>
+  <a href="mailto:p0597775@amarillocollege.com">Ly Prescott</a> <!-- emails me -->
+
+    This page was last updated on:
+	<script>
+	document.write(document.lastModified);
+	</script>
+</footer>
+
+</div>
+</body>
+
+</html>
