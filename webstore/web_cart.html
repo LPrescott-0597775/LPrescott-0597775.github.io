@@ -7,6 +7,11 @@
 <link href="../styles/styles.css" rel="stylesheet"> <!-- links to external stylesheet -->
 <link href="../styles/web_store_styles.css" rel="stylesheet">
 <script src="../scripts/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/common.js"defer ></script>
+    <script src="../scripts/cart.js"defer ></script>
+	<script src="../scripts/shipping.js"defer ></script>
+	<script src="../scripts/anime.min.js"defer ></script>
+	<script src="../scripts/remove_donation.js"defer ></script>
 </head>
 
 <body>
@@ -27,137 +32,96 @@
 	<li></li>
 	<li></li>
 	<li></li>
-	<li><a href="web_store.html">Visit the Web Store</a></li>
+	<li><a href="web_store.html">Continue Shopping</a></li>
   </ul>
   </nav>
  <main>
  <h2>Cart Summary</h2>
 
-<table id="cartSummary">
-   <tr>
-      <td>Item</td>
-	  <td>Details</td>
-      <td>Quantity</td>
-      <td>Price</td>
-      <td>Total</td>
-   </tr>
+<section id="cart-area" class="cart-card"></section>
 
-   <tr>
-      <td>T-Shirt</td>
-	  <td><span id="shirtsOut"></span></td>
-      <td><span id="shirtQtyOut"></span></td>
-      <td>$25.90</td>
-      <td><span id="shirtTotal"></span></td>
-   </tr>
-
-   <tr>
-      <td>Painting</td>
-	  <td><span id="paintingOut"></span></td>
-      <td><span id="paintingQtyOut"></span></td>
-      <td>$79.90</td>
-      <td><span id="paintingTotal"></span></td>
-   </tr>
-
-   <tr>
-      <td>Yarn</td>
-	  <td><span id="yarnOut"></span></td>
-      <td><span id="yarnQtyOut"></span></td>
-      <td>$19.90</td>
-      <td><span id="yarnTotal"></span></td>
-   </tr>
-   <tr>
-      <td colspan="4"><strong>Total</strong></td>
-      <td><span id="Total"></span></td>
-   </tr>
-</table>
+    <div class="total-box">
+        <strong>Total: $</strong><span id="total-box">0.00</span>
+    </div>
+	
 	<h2>Shipping and Billing</h2>
 	
-	<form action = "submit.html" method = "GET">
-	<table id="shipping">
-         <caption>Shipping</caption>
-         <tr>
-            <td>First Name</td>
-            <td><input type="text" id="firstnameShip" required></td>
-         </tr>
-         <tr>
-            <td>Last Name</td>
-            <td><input type="text" id="lastnameShip" required></td>
-         </tr> 
-         <tr>
-            <td>Address 1</td>
-            <td><input type="text" id="address1Ship" required></td>
-         </tr>
-         <tr>
-            <td>Address 2</td>
-            <td><input type="text" id="address2Ship" required></td>
-         </tr> 
-         <tr>
-            <td>City</td>
-            <td><input type="text" id="cityShip" required></td>
-         </tr> 
-         <tr>
-            <td>State</td>
-            <td><input type="text" id="stateShip" required></td>
-         </tr>  
-         <tr>
-            <td>Country</td>
-            <td><input type="text" id="countryShip" required></td>
-         </tr>   
-         <tr>
-            <td>Postal Code</td>
-            <td><input type="text" id="codeShip" required></td>
-         </tr>          
-		        
-            <td>Phone Number</td>
-            <td><input type="text" id="phone" required></td>
-         </tr>   
-         <tr>
-            <td>Email</td>
-            <td><input type="text" id="email" required></td>
-         </tr>  
-      </table>
-	  
-      <label>Billing same as shipping<input type="checkbox" id="useShip"></label>
-	  
-      <table id="billing">
-         <caption>Billing</caption>
-         <tr>
-            <td>First Name</td>
-            <td><input type="text" id="firstnameBill" required></td>
-         </tr>
-         <tr>
-            <td>Last Name</td>
-            <td><input type="text" id="lastnameBill" required></td>
-         </tr> 
-         <tr>
-            <td>Address 1</td>
-            <td><input type="text" id="address1Bill" required></td>
-         </tr>
-         <tr>
-            <td>Address 2</td>
-            <td><input type="text" id="address2Bill" required></td>
-         </tr> 
-         <tr>
-            <td>City</td>
-            <td><input type="text" id="cityBill" required></td>
-         </tr> 
-         <tr>
-            <td>State</td>
-            <td><input type="text" id="stateBill" required></td>
-         </tr>  
-         <tr>
-            <td>Country</td>
-            <td><input type="text" id="countryBill" required></td>
-         </tr>   
-         <tr>
-            <td>Postal Code</td>
-            <td><input type="text" id="codeBill" required></td>
-         </tr>    
-	  </table>
-	  <input type="submit" value="Submit Order">
-	  </form>
+<section class="shipping-layout">
+
+<form action="submit.html" method="GET" id="shipping-form" onsubmit="submitShippingForm(event)">
+
+  <div class="form-columns">
+
+    <!-- Shipping -->
+    <div class="form-section">
+      <h3>Shipping</h3>
+
+      <label for="firstnameShip">First Name</label>
+      <input type="text" id="firstnameShip" required>
+
+      <label for="lastnameShip">Last Name</label>
+      <input type="text" id="lastnameShip" required>
+
+      <label for="address1Ship">Address</label>
+      <input type="text" id="address1Ship" required>
+
+      <label for="cityShip">City</label>
+      <input type="text" id="cityShip" required>
+
+      <label for="stateShip">State</label>
+      <input type="text" id="stateShip" required>
+
+      <label for="countryShip">Country</label>
+      <input type="text" id="countryShip" required>
+
+      <label for="codeShip">Postal Code</label>
+      <input type="text" id="codeShip" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" required>
+
+      <label for="email">Email</label>
+      <input type="text" id="email" required>
+    </div>
+
+    <!-- Billing -->
+    <div class="form-section">
+      <h3>Billing</h3>
+
+      <label for="firstnameBill">First Name</label>
+      <input type="text" id="firstnameBill" required>
+
+      <label for="lastnameBill">Last Name</label>
+      <input type="text" id="lastnameBill" required>
+
+      <label for="address1Bill">Address</label>
+      <input type="text" id="address1Bill" required>
+
+      <label for="cityBill">City</label>
+      <input type="text" id="cityBill" required>
+
+      <label for="stateBill">State</label>
+      <input type="text" id="stateBill" required>
+
+      <label for="countryBill">Country</label>
+      <input type="text" id="countryBill" required>
+
+      <label for="codeBill">Postal Code</label>
+      <input type="text" id="codeBill" required>
+    </div>
+
+  </div>
+
+  <label class="checkbox-row">
+    Billing same as shipping
+    <input type="checkbox" id="useShip">
+  </label>
+
+  <input type="submit" value="Submit Order">
+
+</form>
+</section>
 </main>
-<script src="../scripts/web_store_shipping.js"></script>
 
 <footer>
   Copyright &copy; 2025<br>

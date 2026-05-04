@@ -6,7 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.1">
 <link href="../styles/styles.css" rel="stylesheet">
 <link href="../styles/web_store_styles.css" rel="stylesheet">
- <script src = "../scripts/web_store_main.js" defer></script>
+ <script src = "../scripts/store.js" defer></script>
+ <script src="../scripts/common.js" defer></script>
 </head>
 <body>
 <div id="wrapper">
@@ -35,48 +36,53 @@
   
 	<section id="product-list" class = "product-grid">
 	<div class="product-card">
-	<label for="shirts">Small Skies T-Shirt - $25.90 each</label><select name="shirts" id="shirts">
+	<img id="shopImg" src="../images/tshirt.jpg"></img>
+	<label for="shirts">Small Skies T-Shirt - $25.90 each</label><select id="size-1">
                                                              <option value="sm">Small</option>
 															 <option value="md">Medium</option>
 															 <option value="lg">Large</option>
 															 <option value="xl">X-Large</option>
 															 </select>
-	<label for="shirtsQty"></label><input class = "number" name = "shirtsQty" type="number" min="1" id="shirtsQty">
-	<button class="action-button primary-button" onclick="addToCart('Campus T-Shirt', 18.00, 1)">Add to Cart</button>
+	<label for="shirtsQty"></label><input class = "number" type="number" min="1" value="1" id="qty-1">
+	<button class="action-button primary-button" onclick="addToCart('Small Skies T-Shirt', 25.90, 1)">Add to Cart</button>
 	</div>
 	
 	<div class="product-card">
-	<label for="sweaters">Small Skies Sweater - $49.90 each</label><select name="sweaters" id="sweaters">
+	<img id="shopImg" src="../images/sweater.jpg"></img>
+	<label for="sweaters">Small Skies Sweater - $49.90 each</label><select id="size-2">
                                                              <option value="sm">Small</option>
 															 <option value="md">Medium</option>
 															 <option value="lg">Large</option>
 															 <option value="xl">X-Large</option>
 															 </select>
-	<label for="sweatersQty"></label><input class = "number" name = "sweatersQty" type="number" min="1" id="sweatersQty">
-	<button class="action-button primary-button" onclick="addToCart('Campus T-Shirt', 18.00, 1)">Add to Cart</button>
+	<label for="sweatersQty"></label><input class = "number" type="number" min="1" value="1" id="qty-2">
+	<button class="action-button primary-button" onclick="addToCart('Small Skies Sweater', 49.90, 2)">Add to Cart</button>
 	</div>
 	
 	<div class="product-card">
-	<label for="mugs">Small Skies Mug - $14.90 each</label><select name="mugs" id="mugs">
+	<img id="shopImg" src="../images/mug.jpg"></img>
+	<label for="mugs">Small Skies Mug - $14.90 each</label><select id="size-3">
                                                              <option value="eight">8 oz</option>
 															 <option value="twelve">12 oz</option>
 															 <option value="sixteen">16 oz</option>
 															 </select>
-	<label for="mugsQty"></label><input class = "number" name = "mugsQty" type="number" min="1" id="mugsQty">
-	<button class="action-button primary-button" onclick="addToCart('Campus T-Shirt', 18.00, 1)">Add to Cart</button>
+	<label for="mugsQty"></label><input class = "number" type="number" min="1" value="1" id="qty-3">
+	<button class="action-button primary-button" onclick="addToCart('Small Skies Mug', 14.90, 3)">Add to Cart</button>
 	</div>
 	
 	<div class="product-card">
-	<label for="painting">Small Skies Landscape Painting - $79.90 each</label><select name="painting" id="painting">
+	<img id="shopImg" src="../images/forest_painting.jpg"></img>
+	<label for="painting">Small Skies Landscape Painting - $79.90 each</label><select id="size-4">
                                                              <option value="field">Fields</option>
 															 <option value="forest">Forest</option>
 															 </select>
-	<label for="paintingQty"></label><input class = "number" name = "paintingQty" type="number" min="1" id="paintingQty">
-	<button class="action-button primary-button" onclick="addToCart('Campus T-Shirt', 18.00, 1)">Add to Cart</button>
+	<label for="paintingQty"></label><input class = "number" type="number" min="1" value="1" id="qty-4">
+	<button class="action-button primary-button" onclick="addToCart('Landscape painting', 79.90, 4)">Add to Cart</button>
 	</div>
 	
 	<div class="product-card">
-	<label for="yarn">Local Sheep Yarn - $19.90 each</label><select name="yarn" id="yarn">
+	<img id="shopImg" src="../images/yarn.jpg"></img>
+	<label for="yarn">Local Sheep Yarn - $19.90 each</label><select id="size-5">
                                                              <option value="undyed">Undyed</option>
 															 <option value="red">Red</option>
 															 <option value="orange">Orange</option>
@@ -88,24 +94,21 @@
 															 <option value="brown">Brown</option>
 															 <option value="suprise">Surpise Me!</option>
 															 </select>
-	<label for="yarnQty"></label><input class = "number" name = "yarnQty" type="number" min="1" id="yarnQty">
-    <button class="action-button primary-button" onclick="addToCart('Campus T-Shirt', 18.00, 1)">Add to Cart</button>
+	<label for="yarnQty"></label><input class = "number" type="number" min="1" value="1" id="qty-5">
+    <button class="action-button primary-button" onclick="addToCart('Sheep yarn', 19.90, 5)">Add to Cart</button>
 	</div>
 	
 	<div class="product-card">
-    <label for="donation">Add a donation to protect local wildlife?</label><select name = "donation" id="donation">
+    <label for="donation">Add a $5 donation to protect local wildlife?</label><select id="size-6">
 															<option value = "">No, I support deforestation.</option>
-															<option value = "roundup">Round up to the nearest dollar</option>
-															<option value = "one">$1</option>
-															<option value = "five">$5</option>
-															<option value = "ten">$10</option>
+															<option value = "donate">Yes</option>
 															</select>
-	<button class="action-button primary-button" onclick="addToCart('Campus T-Shirt', 18.00, 1)">Add to Cart</button>
+	<button class="action-button primary-button" onclick="addToCart('Donation', 5.00, 6)">Add to Cart</button>
 	</div>
 	
-	<p id = "shirtError"></p>
-	<p id = "paintingError"></p>
-	<p id = "yarnError"></p>
+	<div class="product-card">
+	<a class="action-button primary-button" href="web_cart.html">View Cart</a>
+	</div>
 	</section>
   </main>
   <footer>

@@ -39,13 +39,22 @@
 .shipping-card,
 .summary-card,
 .cart-card,
-.empty-cart,
 .total-box {
     background-color: white;
     border-radius: 12px;
-    padding: 20px;
+    padding: 2.5em;
     margin: 25px 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+	width: 40em;
+}
+.empty-cart{
+    background-color: #369696;
+    border-radius: 12px;
+    padding: 2.5em;
+    margin: 25px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+	width: 35em;
+	filter: drop-shadow(.25em .25em .1em)
 }
 
 .product-grid {
@@ -98,7 +107,7 @@ textarea {
 
 .cart-row {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr auto;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr auto;
     gap: 12px;
     align-items: end;
     border-bottom: 1px solid #e4ebf0;
@@ -129,7 +138,6 @@ textarea {
 }
 
 .shipping-layout {
-    display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 24px;
     margin-top: 25px;
@@ -155,6 +163,43 @@ textarea {
     border: 1px solid #b9e4dc;
     border-radius: 8px;
 }
+
+form {
+    margin: 0;
+    padding: 0;
+}
+label {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+.form-columns {
+    display: grid;
+    grid-template-columns: 100% 100%;
+    gap: 40px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-row {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+#shopImg {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+}
+label{
+float: left;}
 
 @media (max-width: 900px) {
     .cart-row {
