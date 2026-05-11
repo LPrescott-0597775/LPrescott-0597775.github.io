@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Small Skies Bed and Breakfast </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../styles/styles.css" rel="stylesheet"> <!-- links to external stylesheet -->
+<link href="../styles/web_store_styles.css" rel="stylesheet">
+<script src="../scripts/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/common.js"defer ></script>
+    <script src="../scripts/cart.js"defer ></script>
+	<script src="../scripts/shipping.js"defer ></script>
+	<script src="../scripts/anime.min.js"defer ></script>
+	<script src="../scripts/remove_donation.js"defer ></script>
+</head>
+
+<body>
+<div id="wrapper">
+  <header>
+      <h1>Small Skies B&amp;B</h1> <!-- Top of displayed page-->
+  </header>
+  <nav>
+  <ul> 
+  <!-- list of links to the other parts of the website -->
+    <li><a href="../index.html">Home</a></li>
+	<li><a href="../contact.html">Contact</a></li>
+	<li><a href="../rooms/open.html">Yard Room</a></li>
+	<li><a href="../rooms/woods.html">Woods Room</a></li>
+	<li><a href="../events/weekend.html">Weekend Events</a></li>
+	<li><a href="../cost_estimator.html">Quote Me!</a></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li><a href="web_store.html">Continue Shopping</a></li>
+  </ul>
+  </nav>
+ <main>
+ <h2>Cart Summary</h2>
+
+<section id="cart-area" class="cart-card"></section>
+
+    <div class="total-box">
+        <strong>Total: $</strong><span id="total-box">0.00</span>
+    </div>
+	
+	<h2>Shipping and Billing</h2>
+	
+<section class="shipping-layout">
+
+<form action="submit.html" method="GET" id="shipping-form" onsubmit="submitShippingForm(event)">
+
+  <div class="form-columns">
+
+    <!-- Shipping -->
+    <div class="form-section">
+      <h3>Shipping</h3>
+
+      <label for="firstnameShip">First Name</label>
+      <input type="text" id="firstnameShip" required>
+
+      <label for="lastnameShip">Last Name</label>
+      <input type="text" id="lastnameShip" required>
+
+      <label for="address1Ship">Address</label>
+      <input type="text" id="address1Ship" required>
+
+      <label for="cityShip">City</label>
+      <input type="text" id="cityShip" required>
+
+      <label for="stateShip">State</label>
+      <input type="text" id="stateShip" required>
+
+      <label for="countryShip">Country</label>
+      <input type="text" id="countryShip" required>
+
+      <label for="codeShip">Postal Code</label>
+      <input type="text" id="codeShip" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" required>
+
+      <label for="email">Email</label>
+      <input type="text" id="email" required>
+    </div>
+
+    <!-- Billing -->
+    <div class="form-section">
+      <h3>Billing</h3>
+
+      <label for="firstnameBill">First Name</label>
+      <input type="text" id="firstnameBill" required>
+
+      <label for="lastnameBill">Last Name</label>
+      <input type="text" id="lastnameBill" required>
+
+      <label for="address1Bill">Address</label>
+      <input type="text" id="address1Bill" required>
+
+      <label for="cityBill">City</label>
+      <input type="text" id="cityBill" required>
+
+      <label for="stateBill">State</label>
+      <input type="text" id="stateBill" required>
+
+      <label for="countryBill">Country</label>
+      <input type="text" id="countryBill" required>
+
+      <label for="codeBill">Postal Code</label>
+      <input type="text" id="codeBill" required>
+    </div>
+
+  </div>
+
+  <label class="checkbox-row">
+    Billing same as shipping
+    <input type="checkbox" id="useShip">
+  </label>
+
+  <input type="submit" value="Submit Order">
+
+</form>
+</section>
+</main>
+
+<footer>
+  Copyright &copy; 2025<br>
+  <a href="mailto:p0597775@amarillocollege.com">Ly Prescott</a> <!-- emails me -->
+
+    This page was last updated on:
+	<script>
+	document.write(document.lastModified);
+	</script>
+</footer>
+
+</div>
+</body>
+
+</html>

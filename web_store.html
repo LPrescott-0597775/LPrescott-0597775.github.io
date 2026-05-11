@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Small Skies Bed and Breakfast Contact Form</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.1">
+<link href="../styles/styles.css" rel="stylesheet">
+<link href="../styles/web_store_styles.css" rel="stylesheet">
+ <script src = "../scripts/store.js" defer></script>
+ <script src="../scripts/common.js" defer></script>
+</head>
+<body>
+<div id="wrapper">
+  <header>
+      <h1>Small Skies B&amp;B</h1>
+  </header>
+  <nav>
+  <ul> 
+    <li><a href="../index.html">Home</a></li>
+	<li><a href="../contact.html">Contact</a></li>
+	<li><a href="../rooms/open.html">Yard Room</a></li>
+	<li><a href="../rooms/woods.html">Woods Room</a></li>
+	<li><a href="../events/weekend.html">Weekend Events</a></li>
+	<li><a href="../cost_estimator.html">Quote Me!</a></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li><a href="web_store.html">Visit the Web Store</a></li>
+  </ul>
+  </nav>
+  <main>
+  <h2>Small Skies Web Store</h2>
+  <p>Proceeds from the Small Skies Web Store help support our small buisness, and more!</p>
+  <p><i><strong>NOTE:</strong> Rooms can not be booked through the web store, please <a href="contact.html">contact us</a> to start the reservation process.</i></p>
+  
+	<section id="product-list" class = "product-grid">
+	<div class="product-card">
+	<img id="shopImg" src="../images/tshirt.jpg"></img>
+	<label for="shirts">Small Skies T-Shirt - $25.90 each</label><select id="size-1">
+                                                             <option value="sm">Small</option>
+															 <option value="md">Medium</option>
+															 <option value="lg">Large</option>
+															 <option value="xl">X-Large</option>
+															 </select>
+	<label for="shirtsQty"></label><input class = "number" type="number" min="1" max="5" value="1" id="qty-1">
+	<button class="action-button primary-button" onclick="addToCart('Small Skies T-Shirt', 25.90, 1)">Add to Cart</button>
+	</div>
+	
+	<div class="product-card">
+	<img id="shopImg" src="../images/sweater.jpg"></img>
+	<label for="sweaters">Small Skies Sweater - $49.90 each</label><select id="size-2">
+                                                             <option value="sm">Small</option>
+															 <option value="md">Medium</option>
+															 <option value="lg">Large</option>
+															 <option value="xl">X-Large</option>
+															 </select>
+	<label for="sweatersQty"></label><input class = "number" type="number" min="1" max="5" value="1" id="qty-2">
+	<button class="action-button primary-button" onclick="addToCart('Small Skies Sweater', 49.90, 2)">Add to Cart</button>
+	</div>
+	
+	<div class="product-card">
+	<img id="shopImg" src="../images/mug.jpg"></img>
+	<label for="mugs">Small Skies Mug - $14.90 each</label><select id="size-3">
+                                                             <option value="eight">8 oz</option>
+															 <option value="twelve">12 oz</option>
+															 <option value="sixteen">16 oz</option>
+															 </select>
+	<label for="mugsQty"></label><input class = "number" type="number" min="1" max="5" value="1" id="qty-3">
+	<button class="action-button primary-button" onclick="addToCart('Small Skies Mug', 14.90, 3)">Add to Cart</button>
+	</div>
+	
+	<div class="product-card">
+	<img id="shopImg" src="../images/forest_painting.jpg"></img>
+	<label for="painting">Small Skies Landscape Painting - $79.90 each</label><select id="size-4">
+                                                             <option value="field">Fields</option>
+															 <option value="forest">Forest</option>
+															 </select>
+	<label for="paintingQty"></label><input class = "number" type="number" min="1" max="5" value="1" id="qty-4">
+	<button class="action-button primary-button" onclick="addToCart('Landscape painting', 79.90, 4)">Add to Cart</button>
+	</div>
+	
+	<div class="product-card">
+	<img id="shopImg" src="../images/yarn.jpg"></img>
+	<label for="yarn">Local Sheep Yarn - $19.90 each</label><select id="size-5">
+                                                             <option value="undyed">Undyed</option>
+															 <option value="red">Red</option>
+															 <option value="orange">Orange</option>
+															 <option value="yellow">Yellow</option>
+															 <option value="green">Green</option>
+															 <option value="blue">Blue</option>
+															 <option value="purple">Purple</option>
+															 <option value="black">Black</option>
+															 <option value="brown">Brown</option>
+															 <option value="suprise">Surpise Me!</option>
+															 </select>
+	<label for="yarnQty"></label><input class = "number" type="number" min="1" max="5" value="1" id="qty-5">
+    <button class="action-button primary-button" onclick="addToCart('Sheep yarn', 19.90, 5)">Add to Cart</button>
+	</div>
+	
+	<div class="product-card">
+    <label for="donation">Add a $5 donation to protect local wildlife?</label><select id="size-6">
+															<option value = "">No, I support deforestation.</option>
+															<option value = "donate">Yes</option>
+															</select>
+	<button class="action-button primary-button" onclick="addToCart('Donation', 5.00, 6)">Add to Cart</button>
+	</div>
+	
+	<div class="product-card">
+	<a class="action-button primary-button" href="web_cart.html">View Cart</a>
+	</div>
+	</section>
+  </main>
+  <footer>
+  Copyright &copy; 2125<br>
+  <a href="mailto:p1597775@amarillocollege.com">Ly Prescott</a> <!-- emails me -->
+
+    This page was last updated on:
+	<script>
+	document.write(document.lastModified);
+	</script>
+  </footer>
+</div>
+</body>
+</html>
